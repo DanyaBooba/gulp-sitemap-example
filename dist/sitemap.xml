@@ -2,10 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         
+        <loc>https://news.dybka.ru/example1.html</loc>
+    
+        
+        <lastmod>2024-01-09T03:00:29.578Z</lastmod>
+    
+        
+        <changefreq>weekly</changefreq>
+    
+        
+        <priority>0.5</priority>
+    
+    </url>
+    <url>
+        
+        <loc>https://news.dybka.ru/example2.html</loc>
+    
+        
+        <lastmod>2024-01-09T03:00:33.409Z</lastmod>
+    
+        
+        <changefreq>weekly</changefreq>
+    
+        
+        <priority>0.5</priority>
+    
+    </url>
+    <url>
+        
+        <loc>https://news.dybka.ru/example3.html</loc>
+    
+        
+        <lastmod>2024-01-09T03:00:37.165Z</lastmod>
+    
+        
+        <changefreq>weekly</changefreq>
+    
+        
+        <priority>0.5</priority>
+    
+    </url>
+    <url>
+        
         <loc>https://news.dybka.ru/</loc>
     
         
         <lastmod>2024-01-09T02:43:09.087Z</lastmod>
+    
+        
+        <changefreq>weekly</changefreq>
+    
+        
+        <priority>0.5</priority>
     
     </url>
 </urlset>

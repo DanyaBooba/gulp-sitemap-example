@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const sitemap = require("gulp-sitemap");
+const sitemapFiles = require("gulp-sitemap-files");
 
 function get_sitemap() {
 	return gulp
@@ -9,6 +10,8 @@ function get_sitemap() {
 		.pipe(
 			sitemap({
 				siteUrl: "https://news.dybka.ru",
+				changefreq: "weekly",
+				priority: "0.5",
 			})
 		)
 		.pipe(gulp.dest("dist"));

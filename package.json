@@ -18,5 +18,8 @@
     "gulp-nunjucks": "^5.1.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sitemap": "^8.0.0"
+  },
+  "dependencies": {
+    "gulp-sitemap-files": "^1.0.2"
   }
 }
