@@ -1,48 +1,52 @@
 const gulp = require("gulp");
+
 const sitemap = require("gulp-sitemap");
-const turbo = require("turbo-rss");
-var fs = require("fs");
 
-var feed = new turbo({
-	title: "Название",
-	link: "https://example.com",
-	description: "Описание",
-	language: "ru",
-});
+const rss = require("gulp-rss"); // --force
 
-feed.item({
-	title: "Заголовок",
-	image_url: "example.jpg",
-	image_caption: "Подпись",
-	url: "https://news.dybka.ru/example/",
-	author: "Даниил Дыбка",
-	pubDate: "Mon, 1 Jan 2024 12:00:00 GMT",
-	content: "КОНТЕНТ",
-	menu: [
-		{
-			link: "https://news.dybka.ru",
-			text: "Читать",
-		},
-		{
-			link: "https://news.dybka.ru/tech",
-			text: "Техника",
-		},
-		{
-			link: "https://news.dybka.ru/updates",
-			text: "Проекты",
-		},
-		{
-			link: "https://news.dybka.ru/games",
-			text: "Игры",
-		},
-		{
-			link: "https://news.dybka.ru/sundry",
-			text: "Разное",
-		},
-	],
-});
+const fs = require("fs");
+// const turbo = require("turbo-rss");
 
-const xml = feed.xml();
+// var feed = new turbo({
+// 	title: "Название",
+// 	link: "https://example.com",
+// 	description: "Описание",
+// 	language: "ru",
+// });
+
+// feed.item({
+// 	title: "Заголовок",
+// 	image_url: "example.jpg",
+// 	image_caption: "Подпись",
+// 	url: "https://news.dybka.ru/example/",
+// 	author: "Даниил Дыбка",
+// 	pubDate: "Mon, 1 Jan 2024 12:00:00 GMT",
+// 	content: "КОНТЕНТ",
+// 	menu: [
+// 		{
+// 			link: "https://news.dybka.ru",
+// 			text: "Читать",
+// 		},
+// 		{
+// 			link: "https://news.dybka.ru/tech",
+// 			text: "Техника",
+// 		},
+// 		{
+// 			link: "https://news.dybka.ru/updates",
+// 			text: "Проекты",
+// 		},
+// 		{
+// 			link: "https://news.dybka.ru/games",
+// 			text: "Игры",
+// 		},
+// 		{
+// 			link: "https://news.dybka.ru/sundry",
+// 			text: "Разное",
+// 		},
+// 	],
+// });
+
+// const xml = feed.xml();
 
 function get_rss() {}
 
@@ -70,7 +74,7 @@ function get_sitemap() {
 //
 
 exports.default = gulp.series(get_sitemap, function (cb) {
-	fs.writeFile("dist/turbo.xml", xml, cb);
+	fs.writeFile("dist/turbo.xml", "xml", cb);
 });
 
 // var frontMatter = require("gulp-front-matter");
