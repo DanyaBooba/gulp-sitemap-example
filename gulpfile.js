@@ -1,8 +1,6 @@
 const gulp = require("gulp");
 
-const rss = require("gulp-rss"); // --force
-
-const frontMatter = require("gulp-front-matter");
+const feed = require("@zadkiel/gulp-feed");
 
 // const sitemap = require("gulp-sitemap");
 
@@ -50,6 +48,15 @@ const frontMatter = require("gulp-front-matter");
 
 // const xml = feed.xml();
 
+const posts = [gulp.src("src/**/*.html")];
+
+const options = {
+	transform: (post) => post,
+	render: {
+		"mysuperrss.xml": "rss2",
+	},
+};
+
 function get_sitemap() {
 	return gulp
 		.src("src/**/*.html", {
@@ -70,33 +77,8 @@ function get_sitemap() {
 //
 
 exports.default = gulp.series(function () {
-	gulp
-		.src("src/**/*.html")
-		.pipe(frontMatter())
-		.pipe(
-			rss({
-				properties: {
-					data: "frontMatter",
-					title: "title",
-					link: "permalink",
-					description: "description",
-					author: "author",
-					date: "date",
-					image: "image",
-				},
-				render: "atom-1.0",
-				title: "My blog",
-				description: "My very own blog",
-				link: "http://my.bl.og",
-				author: { name: "Nicolas Chambrier" },
-			})
-		)
-		.pipe(gulp.dest("./public/feed.xml"));
+	feed(posts, options).pipe(gulp.dest("assets/"));
 });
-
-// exports.default = gulp.series(get_sitemap, function (cb) {
-// 	fs.writeFile("dist/turbo.xml", "xml", cb);
-// });
 
 // var frontMatter = require("gulp-front-matter");
 // var rss = require("gulp-rss");

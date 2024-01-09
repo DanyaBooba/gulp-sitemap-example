@@ -22,6 +22,7 @@
     "turbo-rss": "^2.0.1"
   },
   "dependencies": {
+    "@zadkiel/gulp-feed": "^0.0.5",
     "gulp-front-matter": "^1.3.0",
     "gulp-rss": "^0.0.1",
     "gulp-sitemap-files": "^1.0.2"
