@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title></title>
         <link></link>
         <description></description>
-        <lastBuildDate>Tue, 09 Jan 2024 12:59:14 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Jan 2024 13:45:51 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
+            <title><![CDATA[My super title]]></title>
+            <content:encoded><![CDATA[My super content]]></content:encoded>
         </item>
     </channel>
 </rss>
